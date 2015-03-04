@@ -39,7 +39,8 @@
             <h2>&bull; About Me &bull;</h2>
             <p>Hi, I'm Edward Bryant, a Chicago-based web developer and designer interested in making finely crafted websites that are intuitive to use. I prefer to write in <strong>JavaScript</strong>, <strong>CSS</strong>, <strong>jQuery</strong>, <strong>Python</strong>, and <strong>PHP</strong>, but I have had experience with a number of other languages and frameworks. 
             - Although I gradulated law school I have recovering lawyer transitioning my freelance 
-            - former art major and award-winning cartoonist. <a href="#">more...</a></p>
+            - former art major and award-winning cartoonist. <a id="about-expand" href="#about">More <i class="fa fa-angle-down"></i></a></p>
+            <p id="about-extra" class="hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
             <button class="resume"><i class="fa fa-download"></i> My Resume</button>
         </div>   
     </section>
@@ -92,24 +93,25 @@
             </div>
         </div>
     </section>
-        <section id="posts">
-            <div class="content">
-                <h2>&bull; Recent Posts &bull;</h2>
-                <div class="post-group">
-                    <div class="post">
-                        <h3 class="title">Post Title 1</h3>
-                        <div class="date">&bull; February 20, 2015 &bull;</div>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. deserunt mollitia animi, id est laborum et dolorum fuga. <a href="#">More...</a></p>
-                    </div>
-                    <div class="post">
-                        <h3 class="title">Post Title 2</h3>
-                        <div class="date">&bull; February 22, 2015 &bull;</div>
-                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <a href="#">More...</a></p>
-                    </div>
+    <section id="posts">
+        <div class="content">
+            <h2>&bull; Recent Posts &bull;</h2>
+            <div class="post-group">
+                <div class="post">
+                    <h3 class="title">Post Title 1</h3>
+                    <div class="date">&bull; February 20, 2015 &bull;</div>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. deserunt mollitia animi, id est laborum et dolorum fuga. <a href="#">More &hellip;</a></p>
                 </div>
-            </div>    
-        </section>
-        <section id="contact">
+                <div class="post">
+                    <h3 class="title">Post Title 2</h3>
+                    <div class="date">&bull; February 22, 2015 &bull;</div>
+                    <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <a href="#">More &hellip;</a></p>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <section id="contact">
+        <div class="content">
             <h2>&bull; Contact Me &bull;</h2>
             <form id="contact-form">
                 <div>
@@ -122,16 +124,19 @@
                 </div>
                 <div>
                     <label for="contact-message">Message</label>
-                    <input type="text" name="contact-message" id="contact-message" value="">
+                    <textarea name="contact-message" id="contact-message" value=""></textarea>
                 </div>
+                <div><button id="send"><i class="fa fa-envelope-o"></i> Send</button></div>
             </form>
-        </section>
-    
+        </div>
+    </section>
 </main>
 <footer>
-    <div>Built in the USA</div>
+    <div class="content">
+        <div>&ldquo;Logic will get you from A to B. Imagination will take you everywhere.&rdquo; &mdash;Albert Einstein</div>
+    </div>
 </footer>
 <script src="lib/jquery/1.11.1/jquery.min.js"></script>
-<script src="app.js"></script>
+<script src="portfolio.js"></script>
 </body>
 </html>

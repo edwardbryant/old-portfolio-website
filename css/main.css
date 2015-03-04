@@ -15,12 +15,16 @@ body {
     width: 75rem;
     margin: auto;
 }
+a {
+    color: #ecab32;
+    text-decoration: none;
+}
 strong {
     color: #fff;
     font-weight: normal;
 }
 button {
-    background-color: #345185;
+    background-color: #324e80;
     padding: 1rem 1.6rem;
     border: 2px solid #eee;
     color: #eee;
@@ -37,6 +41,24 @@ button:hover {
     color: #345185;
     transition: all 0.25s ease-in-out 0s
 } 
+section {
+    padding: 6rem;
+    text-align: center;
+    font-size: 2rem;
+}
+section h2 {
+    font: 600 2.4rem/2.6rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    margin: 0.4rem auto;
+    color: #fff; 
+}
+section p {
+    text-align: left;
+}
+.hidden {
+    display: none;
+}
 
 /* HEADER */
 
@@ -95,30 +117,24 @@ header .links > a {
     text-decoration: none;
 }
 
+/* ABOUT ME SECTION */
 
-/* MAIN */
-
-
-section {
-    padding: 6rem;
-    text-align: center;
-    font-size: 2rem;
-}
-section h2 {
-    font: 600 2.4rem/2.6rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
-    letter-spacing: 0.4rem;
-    text-transform: uppercase;
-    margin: 0.4rem auto;
-    color: #fff; 
-}
-section p {
-    text-align: left;
-}
-#about, #contact {
+#about {
     background-color: #345185;
     color: #ccc;
 }
-#work, #posts {
+#about a {
+    margin-left: 1.2rem;
+    text-transform: uppercase;
+}
+#about button {
+    margin: 1rem;
+}
+
+
+/* RECENT WORK SECTION */
+
+#work {
     background-color: #456CB1;
     color: #ccc;
 }
@@ -174,11 +190,12 @@ section p {
     z-index: 50;
 }
 
+/* RECENT POSTS SECTION */
 
-
-
-
-
+#posts {
+    background-color: #456CB1;
+    color: #ccc;
+}
 #posts .posts-group {
     margin-top: 2rem;
 }
@@ -207,34 +224,73 @@ section p {
 } 
 #posts .text {
     font: 300 1.5rem/2.4rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
-    letter-spacing: 0.08rem;
     color: #eee;
     margin: 1rem 1rem 3rem 1rem;
     text-align: justify;
     text-justify: inter-word;
 } 
-
-
-
-
-
-#contact form {
-    margin: 4rem auto;
+#posts a {
+    margin-left: 1.2rem;
+    text-transform: uppercase;
 }
 
+/* CONTACT ME SECTION */
 
+#contact {
+    background-color: #345185;
+    color: #ccc;
+}
+#contact form {
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 50rem;
+    text-align: center;
+}
+#contact form > div {
+    margin-bottom: 1.8rem;
+}
+#contact label {
+    text-align: left;
+    display: block;
+    font: 400 1.8rem/2.2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.6rem;
+}
+#contact input, #contact textarea {
+    display: block;
+    font: 400 1.8rem/2.2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    color: #999;
+    padding: 0.6rem;
+    border: 1px solid #999;
+    background-color: #345185;
+}
+#contact textarea {
+    height: 24rem;
+}
+#contact input:focus, #contact textarea:focus {
+    color: #eee;
+    border: 1px solid #eee;
+    background-color: #324e80;
+}
 
-
-
-
+/* FOOTER SECTION */
 
 footer {
     background-color: #1F3150;
     background-image: url('../img/grid.png');
-    color: #eee;
+    color: #88b;
     margin: 0;
     padding: 1rem 0;
+    font: 400 1.2rem/1.4rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.1rem;
 }
+footer div {
+    margin: 4rem auto;
+    text-align: center;
+}
+
 
 @media (max-width: 820px) {
     header > .masthead {
@@ -261,10 +317,10 @@ footer {
     main .content {
         width: 50rem;
     }
-main section {
-    padding: 4rem;
-    text-align: center;
-    font-size: 1.4rem;
+    main section {
+        padding: 4rem;
+        text-align: center;
+        font-size: 1.4rem;
     }
 }
 
