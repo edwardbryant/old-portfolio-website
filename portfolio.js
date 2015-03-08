@@ -1,16 +1,12 @@
 
 $(document).ready(function(){
 
-
-/*
-    $('.nav-toggle').on('click', function() {
+    $('#btn-nav').on('click', function() {
         $.playSound('sfx/sound2');
-        $('header').find('.nav-toggle').toggle(100, function() {
-            $('#navigation').toggle(400);
-        });        
+        $('nav').find('ul').toggle(600);
         return false;
     })
-*/
+
     $('#about-expand').on('click', function() {
         $('#about-extra').toggle(500, function() {
             var more = 'More <i class="fa fa-angle-down"></i>';
