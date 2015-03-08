@@ -1,7 +1,16 @@
 
 $(document).ready(function(){
 
-    // expanding about section.
+
+/*
+    $('.nav-toggle').on('click', function() {
+        $.playSound('sfx/sound2');
+        $('header').find('.nav-toggle').toggle(100, function() {
+            $('#navigation').toggle(400);
+        });        
+        return false;
+    })
+*/
     $('#about-expand').on('click', function() {
         $('#about-extra').toggle(500, function() {
             var more = 'More <i class="fa fa-angle-down"></i>';
