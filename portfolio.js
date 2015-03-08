@@ -20,6 +20,11 @@ $(document).ready(function(){
     // populate recent blog post data.
     getBlogPosts();
 
+    $('#github').hover(
+        $('#site').text("GitHub")        
+    )
+
+
 });
 
 var getBlogPosts = function() {
