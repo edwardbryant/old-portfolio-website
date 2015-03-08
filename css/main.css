@@ -72,12 +72,14 @@ section p {
 /* NAVIGATION */ 
 
 nav {
-    font: 500 1.8rem/2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font: 400 1.6rem/1.8rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.08rem;
+    text-align: center;
+    margin: auto;
 }
 nav #btn-nav {
     font-size: 2.8rem;
     margin-right: 1rem;
-    float: left;
 }
 nav a {
     color: #aaa;

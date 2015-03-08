@@ -3,6 +3,9 @@ $(document).ready(function(){
 
     $('#btn-nav').on('click', function() {
         $.playSound('sfx/sound2');
+
+        
+
         $('nav').find('ul').toggle(600);
         return false;
     })
