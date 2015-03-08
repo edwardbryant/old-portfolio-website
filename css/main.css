@@ -273,8 +273,24 @@ header .links > a {
 /* CONTACT ME SECTION */
 
 #contact {
+    font: 400 1.6rem/1.6rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
     background-color: #345185;
     color: #ccc;
+}
+#contact .content > div {
+    margin: 1.8rem;    
+}
+#contact .links {
+    font: 400 4rem/4rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
+    margin: 2rem;
+}
+#contact .links a {
+    color: #ccc;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#contact .links a:hover {
+    color: #fff;
 }
 #contact form {
     margin: 2rem auto;
