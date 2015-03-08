@@ -1,21 +1,35 @@
 
 $(document).ready(function(){
 
-    getBlogPosts();
+    // expanding social links group.
+    $('#social-expand').on('click', function(){
+        var links = '<a target="_blank" href="https://github.com/edwardbryant">github</a> | <a target="_blank" href="http://www.linkedin.com/pub/edward-bryant/8/791/594/">linkedin</a> | <a href="#">twitter</a> | <a href="#">codepen</a> | <a href="#">StackOverflow</a> | <a href="#">Facebook</a>';
+        $.playSound('sfx/sound2');
+        $('#social').html(links);
+        return false;
+    })
 
+    // TODO - links to .... codepen, stack overflow, facebook  
+
+    // expanding about section.
     $('#about-expand').on('click', function() {
         $('#about-extra').toggle(500, function() {
             var more = 'More <i class="fa fa-angle-down"></i>';
             var less = 'Less <i class="fa fa-angle-up"></i>';
+            $.playSound('sfx/sound2');
             ($('#about-expand').html() === more) ? $('#about-expand').html(less) : $('#about-expand').html(more);
         });
+        return false;
     })
+
+    // populate recent blog post data.
+    getBlogPosts();
 
 });
 
 var getBlogPosts = function() {
 
-    // TO DO - replace hand-coded data with API calls to WP-API.
+    // TODO - replace hand-coded data with API calls to WP-API.
 
     var data = {
         1: {
