@@ -63,6 +63,11 @@ section p {
 .hidden {
     display: none;
 }
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* HEADER */
 
@@ -92,7 +97,6 @@ header > #masthead {
     max-width: 70rem;
     margin: 6rem auto;
     padding: 2rem;
-    /* box-shadow: 2px 2px 2px #335; */
 }
 header h1 {
     font: 800 4rem/4.2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
@@ -104,7 +108,17 @@ header .subtitle {
     font: 400 2rem/2.2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
     letter-spacing: 0.1rem;
     margin: 1rem 0 4rem 0;
-} 
+}
+header .logo {
+    margin-right: 14px;
+    border-right: 2px solid #999;
+    float: left;
+    padding: 0 2rem 0 0;
+}
+header .details {
+    margin: 1rem 0;
+    float: left;
+}
 header .location, header .email {
     font: 200 1.2rem/1.8rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
     letter-spacing: 0.08rem;
@@ -288,12 +302,12 @@ footer {
     background-image: url('../img/grid.png');
     color: #88b;
     margin: 0;
-    padding: 1rem 0;
+    padding: 4rem 0;
     font: 400 1.2rem/1.4rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
     letter-spacing: 0.1rem;
 }
 footer div {
-    margin: 4rem auto;
+    margin: 1rem auto;
     text-align: center;
 }
 
@@ -318,10 +332,22 @@ footer div {
         font-size: 1.6rem;
     }
 }
-@media (max-width: 600px) {
-    header {
+@media (max-width: 710px) {
+   header {
         text-align: center;
     }
+    header .logo {
+        border: 0;
+        padding: 0;
+        float: none;
+        margin: 1rem auto;
+    }
+    header .details {
+        float: none;
+        margin: 1rem auto;
+    }
+}
+@media (max-width: 600px) {
     header #masthead {    
         margin: 2rem auto;
     }

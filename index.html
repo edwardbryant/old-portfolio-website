@@ -23,13 +23,17 @@
             </ul>
         </nav>
     </div>    
-    <div id="masthead">
+    <div id="masthead" class="clearfix">
         <h1>Edward Bryant</h1>
         <div class="subtitle">web developer + designer</div>
-
-        <div class="location">Chicago, Illinois</div>
-        <div class="email">me@edwardbryant.com</div>
-        <div class="links" id="social"><a target="_blank" href="https://github.com/edwardbryant">github</a> | <a target="_blank" href="http://www.linkedin.com/pub/edward-bryant/8/791/594/">linkedin</a> | <a href="#">twitter</a> | <a id="social-expand" href="">more ...</a></div>
+        <div class="logo">
+            <img src="img/eb-logo-sm.png">
+        </div>
+        <div class="details">
+            <div class="location">Chicago, Illinois</div>
+            <div class="email">me@edwardbryant.com</div>
+            <div class="links" id="social"><a target="_blank" href="https://github.com/edwardbryant">github</a> | <a href="#">codepen</a> | <a href="#">stackoverflow</a> | <a target="_blank" href="http://www.linkedin.com/pub/edward-bryant/8/791/594/">linkedin</a> | <a href="#">twitter</a></div>
+        </div>
     </div>
 </header>
 <main id="main" role="main">
@@ -118,8 +122,8 @@
                     <input type="text" name="contact-name" id="contact-name" value="">
                 </div>
                 <div>
-                    <label for="contact-subject">Subject</label>
-                    <input type="text" name="contact-subject" id="contact-subject" value="">
+                    <label for="contact-email">Email</label>
+                    <input type="text" name="contact-email" id="contact-email" value="">
                 </div>
                 <div>
                     <label for="contact-message">Message</label>
@@ -133,6 +137,7 @@
 <footer>
     <div class="content">
         <div><i class="fa fa-quote-left"></i> Logic will get you from A to B. Imagination will take you everywhere.<i class="fa fa-quote-right"></i> &mdash;Albert Einstein</div>
+        <div>&copy; 2015 &bull; Edward Bryant</div>
     </div>
 </footer>
 <script src="lib/jquery/1.11.1/jquery.min.js"></script>
