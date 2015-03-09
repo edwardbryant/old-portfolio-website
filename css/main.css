@@ -345,9 +345,12 @@ footer div {
 }
 footer .quote {
     color: #ccc;
+    font-size: 1.6rem;
+}
+footer .attribution {
+    margin-top: 1rem;
     font-size: 1.4rem;
 }
-
 
 /* MEDIA QUERIES / RESPONSIVE SETTINGS */
 
