@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     $('nav').find('#btn-nav').on('click', function() {
         $.playSound('sfx/sound2');
-        $('nav').find('ul').toggle(600);
+        $('nav').find('ul').slideToggle(600);
         return false;
     })
 
@@ -23,11 +23,6 @@ $(document).ready(function(){
 
     // populate recent blog post data.
     getBlogPosts();
-
-    $('#github').hover(
-        $('#site').text("GitHub")        
-    )
-
 
 });
 

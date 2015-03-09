@@ -278,16 +278,14 @@ header .links > a {
     color: #ccc;
 }
 #contact .content > div {
-    margin: 1.8rem;    
+    margin: 2.4rem;    
 }
 #contact .links {
     font: 400 4rem/4rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
-    margin: 2rem;
 }
 #contact .links a {
     color: #ccc;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0.6rem 1rem;
 }
 #contact .links a:hover {
     color: #fff;
@@ -313,9 +311,9 @@ header .links > a {
     display: block;
     font: 400 1.8rem/2.2rem "Raleway","Helvetica Neue","Helvetica","Arial",sans-serif;
     letter-spacing: 0.1rem;
-    width: 100%;
+    width: 90%;
     color: #999;
-    padding: 0.6rem 0;
+    padding: 0.6rem;
     border: 1px solid #999;
     background-color: #324e80;
 }
