@@ -177,6 +177,34 @@ header {
     background-color: $dark-blue-2;
     color: #ccc;
 
+    h3 {
+        font: 600 2rem/2rem $font-1;
+        letter-spacing: 0.16rem;
+        color: $off-white;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        font: 600 1.6rem/1.5rem $font-1;
+        letter-spacing: 0.1rem;
+        color: $off-white;
+        display: block-inline;
+        margin: 0.2rem 0 0.2rem 1.2rem;
+        height: 2.8rem;
+        width: 30%;
+        float: left;
+        text-align: left;
+    }
+    .high {
+        font-weight: 600;
+    }
+    .medium {
+        font-weight: 300;
+    }
+    .low {
+        font-weight: 100;
+    }
     a {
         margin-left: 1.2rem;
         text-transform: uppercase;

@@ -133,6 +133,28 @@ header {
 #about {
   background-color: #345185;
   color: #ccc; }
+  #about h3 {
+    font: 600 2rem/2rem "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    letter-spacing: 0.16rem;
+    color: #eeeeee; }
+  #about ul {
+    list-style-type: none; }
+  #about li {
+    font: 600 1.6rem/1.5rem "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #eeeeee;
+    display: block-inline;
+    margin: 0.2rem 0 0.2rem 1.2rem;
+    height: 2.8rem;
+    width: 30%;
+    float: left;
+    text-align: left; }
+  #about .high {
+    font-weight: 600; }
+  #about .medium {
+    font-weight: 300; }
+  #about .low {
+    font-weight: 100; }
   #about a {
     margin-left: 1.2rem;
     text-transform: uppercase; }
