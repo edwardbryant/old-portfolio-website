@@ -11,6 +11,23 @@ $(document).ready(function(){
         $.playSound('sfx/sound2');
     })
 
+    $('#about-link').on('click', function() {
+        $.playSound('sfx/sound2');
+        window.location.hash = "#about";
+    })
+    $('#work-link').on('click', function() {
+        $.playSound('sfx/sound2');
+        window.location.hash = "#work";
+    })
+    $('#posts-link').on('click', function() {
+        $.playSound('sfx/sound2');
+        window.location.hash = "#posts";
+    })
+    $('#contact-link').on('click', function() {
+        $.playSound('sfx/sound2');
+        window.location.hash = "#contact";
+    })
+
     $('#about-expand').on('click', function() {
         $('#about-extra').toggle(500, function() {
             var more = 'More <i class="fa fa-angle-down"></i>';
@@ -20,6 +37,11 @@ $(document).ready(function(){
         });
         return false;
     })
+
+
+
+
+
 
     // populate recent blog post data.
     getBlogPosts();

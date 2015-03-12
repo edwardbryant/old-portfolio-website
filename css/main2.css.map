@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAQA,IAAK;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,uBAAuB;EACpC,sBAAsB,EAAE,WAAW;;AAEvC,IAAK;EACD,SAAS,EAAE,IAAI;EACf,SAAS,EAAE,IAAI;EACf,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,CAAC",
-"sources": ["portfolio.scss"],
-"names": [],
-"file": "main2.css"
-}
