@@ -39,14 +39,6 @@ body {
     display: table;
     clear: both;
 }
-.fade {
-    opacity: 1;
-    transition: opacity 0.25s ease-out 0s;
-}
-.fade:hover {
-    opacity: 0.5;
-    transition: opacity 0.25s ease-out 0s;
-}
 a {
     color: $link-color;
     text-decoration: none;
@@ -337,11 +329,9 @@ header {
         color: #ccc;
         margin: 0.6rem 1rem;
     }
-    /*
     .links a:hover {
         color: $pure-white;
     }
-    */
     form {
         margin: 2rem auto;
         padding: 2rem 0;
