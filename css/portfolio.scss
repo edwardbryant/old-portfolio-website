@@ -319,7 +319,7 @@ header {
     color: $off-white;
 
     .content > div {
-        margin: 2.4rem;    
+        margin: 2.4rem;
     }
     .links {
         font-size: 4rem; 
@@ -349,9 +349,12 @@ header {
     }
     input, textarea {
         display: block;
-        width: 90%;
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         color: $light-gray;
-        padding: 0.6rem;
+        padding: 0.8rem;
         border: 1px solid $light-gray;
         background-color: $dark-blue-2;
     }

@@ -270,9 +270,12 @@ header {
     margin-bottom: 0.6rem; }
   #contact input, #contact textarea {
     display: block;
-    width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     color: #999999;
-    padding: 0.6rem;
+    padding: 0.8rem;
     border: 1px solid #999999;
     background-color: #345185; }
   #contact textarea {
