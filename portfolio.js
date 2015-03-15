@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+    console.log("Portfolio loaded.");
+
     $('nav').find('#btn-nav').on('click', function() {
         $.playSound('sfx/sound2');
         $('nav').find('ul').slideToggle(600);
@@ -38,12 +40,6 @@ $(document).ready(function(){
         return false;
     })
 
-
-
-
-
-
-    // populate recent blog post data.
     getBlogPosts();
 
 });
@@ -51,6 +47,8 @@ $(document).ready(function(){
 var getBlogPosts = function() {
 
     // TODO - replace hand-coded data with API calls to WP-API.
+
+    console.log("API function start ...")
 
     var data = {
         1: {
@@ -64,6 +62,34 @@ var getBlogPosts = function() {
             "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
         }
     }
+
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: 'http://www.edwardbryant.com/blog/wp-json/posts',
+    })
+    .done( function(data){
+        console.log("SUCCESSFUL");
+    })
+    .fail( function(jqXHR, error, errorThrown){
+        console.log("FAILED - " + error + " : " + errorThrown);
+        console.log(jqXHR);
+    });
+    
+
+    /*
+    var result = $.ajax({
+        url: "http://www.edwardbryant.com/blog/wp-json/posts",
+        type: "GET"
+    })
+    .done(function(result){
+        var info = result;
+        console.log(info);
+    })
+    .fail(function(jqXHR, error, errorThrown) {
+        console.log(error + " | " + errorThrown);
+    });
+    */
 
     // populate data
 
