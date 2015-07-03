@@ -14,8 +14,8 @@ For the live version of this portfolio, check out <http://www.edwardbryant.com/p
 
 ## Download
 
-The files for the project, may be [downloaded here](https://github.com/edwardbryant/time-travel-trivia-quiz/archive/master.zip).
+The files used to create this portfolio, may be [downloaded here](https://github.com/edwardbryant/portfolio-website/archive/master.zip).
 
 ## Copyright and License
 
-- Project code contributed by [Edward Bryant](http://www.edwardbryant.com) is offered under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+- Code contributed to this project by [Edward Bryant](http://www.edwardbryant.com) is offered under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
