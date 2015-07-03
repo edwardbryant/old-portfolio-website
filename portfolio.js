@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-    console.log("Portfolio loaded.");
+    getBlogPosts();
 
     $('nav').find('#btn-nav').on('click', function() {
         $.playSound('sfx/sound2');
@@ -38,67 +38,51 @@ $(document).ready(function(){
             ($('#about-expand').html() === more) ? $('#about-expand').html(less) : $('#about-expand').html(more);
         });
         return false;
-    })
+    });
 
-    getBlogPosts();
+    $('#contact-message').on('focusin', function() {
+        $(this).css("height", "24rem");
+    });
+
+    $('#contact-form').submit(function(e){
+        e.preventDefault();
+        $(this).fadeOut(500, function(){
+            var name = $('#contact-name').val();
+            var email = $('#contact-email').val();
+            var message = $('#contact-message').val();
+            $('#contact-form-msg').html("<div>Message Sent!<br><span>I will get back to you as soon as I can.</span></div>");
+            $('#contact-form-msg').fadeIn(500);
+            $.post("email-me.php",  {name: name, email: email, message: message} );
+        });        
+    });
 
 });
 
+
+
+
 var getBlogPosts = function() {
-
-    // TODO - replace hand-coded data with API calls to WP-API.
-
-    console.log("API function start ...")
-
-    var data = {
-        1: {
-            "title": "Example Post Title Number One",
-            "date": "February 20, 2015",
-            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. deserunt mollitia animi, id est laborum et dolorum fuga."
-        },
-        2: {
-            "title": "Another Example Post Title, The Sequel",
-            "date": "March 1, 2015",
-            "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
+    $.getJSON( "http://www.edwardbryant.com/blog/wp-json/posts", function( data ) {
+        var posts = [{},{}];
+        // get data on 2 most recent posts 
+        for (var i=0;i<2;i++) {
+            posts[i]["title"] = '<a href="' + data[i]["link"] + '">' + data[i]["title"] + '</a>';
+            var d = new Date(data[i]["date"]); 
+            var monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var m = monthName[d.getMonth()]; 
+            posts[i]["date"] = m + " " + d.getDate() + ", " + d.getFullYear();
+            var t = data[i]["excerpt"];
+            posts[i]["text"] = t.slice(0, t.indexOf("&hellip; ")) + '&hellip; <a href="' + data[i]["link"] + '">MORE</a></p>'; 
         }
-    }
-
-    $.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: 'http://www.edwardbryant.com/blog/wp-json/posts',
-    })
-    .done( function(data){
-        console.log("SUCCESSFUL");
-    })
-    .fail( function(jqXHR, error, errorThrown){
-        console.log("FAILED - " + error + " : " + errorThrown);
-        console.log(jqXHR);
+        // populate blog post #1
+        $('#post1').find('.title').html(posts[0]["title"]);
+        $('#post1').find('.date').html("&bull; " + posts[0]["date"] + " &bull;");
+        $('#post1').find('.text').html(posts[0]["text"]);
+        // populate blog post #2
+        $('#post2').find('.title').html(posts[1]["title"]);
+        $('#post2').find('.date').html("&bull; " + posts[1]["date"] + " &bull;");
+        $('#post2').find('.text').html(posts[1]["text"]);
     });
-    
+};
 
-    /*
-    var result = $.ajax({
-        url: "http://www.edwardbryant.com/blog/wp-json/posts",
-        type: "GET"
-    })
-    .done(function(result){
-        var info = result;
-        console.log(info);
-    })
-    .fail(function(jqXHR, error, errorThrown) {
-        console.log(error + " | " + errorThrown);
-    });
-    */
 
-    // populate data
-
-    $('#post1').find('.title').html(data[1]["title"]);
-    $('#post1').find('.date').html("&bull; " + data[1]["date"] + " &bull;");
-    $('#post1').find('.text').html(data[1]["text"] + ' <a href="#">More &hellip;</a>');
-
-    $('#post2').find('.title').html(data[2]["title"]);
-    $('#post2').find('.date').html("&bull; " + data[2]["date"] + " &bull;");
-    $('#post2').find('.text').html(data[2]["text"] + ' <a href="#">More &hellip;</a>');
-
-}; 

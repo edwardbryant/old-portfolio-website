@@ -12,6 +12,7 @@ $light-gray: #999999;
 $off-white: #eeeeee;
 $pure-white: #ffffff;
 $link-color: #ecab32;
+$success: #66ffbb;
 
 html {
     color: $off-white;
@@ -75,6 +76,14 @@ button {
 
 }
 
+.return {
+    padding: 0.8rem 0 2rem 0;
+    text-align: center;
+    font: 400 1.2rem/1.4rem $font-1;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
 section {
     padding: 3rem 6rem 3rem 6rem;
     text-align: center;
@@ -121,7 +130,8 @@ nav {
 
 header {
     background-color: $darkest-blue;
-    background-image: url('../img/grid.png');
+    background-image: url('../img/code-bkgd.png');
+    background-size: cover;
     border-top: 2px solid #3d557f;
     color: $off-white;
     margin: 0;
@@ -157,17 +167,19 @@ header {
         float: left;
     }
     .location, .email {
-        font: 200 1.2rem/1.8rem $font-1;
+        font: 300 1.2rem/1.8rem $font-1;
         letter-spacing: 0.08rem;
+        color: $off-white;
         margin: 0.2rem 0;
     }
     .links {
-        font: 200 1.4rem/1.8rem $font-1;
+        font: 300 1.4rem/1.8rem $font-1;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
+        color: $off-white;
         margin: 0.2rem 0;
     }
-    .links > a {
+    .links a {
         font-size: 1rem;
         color: $link-color;
         text-decoration: none;
@@ -183,6 +195,29 @@ header {
         letter-spacing: 0.16rem;
         color: $off-white;
     }
+    a {
+        letter-spacing: 0.09rem;
+    }
+    button {
+        margin: 1rem;
+    }
+    p {
+        font: 300 1.8rem/2.4rem $font-1;
+        letter-spacing: 0.1rem;
+        color: $off-white;
+
+    }
+    p > strong {
+        color: hsla(40, 100%, 86%, 1);
+    }
+}
+
+/* SKILLS SECTION */
+
+#skills {
+    background-color: $medium-blue;
+    color: #ccc;
+
     ul {
         list-style-type: none;
     }
@@ -206,19 +241,12 @@ header {
     .low {
         font-weight: 100;
     }
-    a {
-        margin-left: 1.2rem;
-        text-transform: uppercase;
-    }
-    button {
-        margin: 1rem;
-    }
 }
 
 /* RECENT WORK SECTION */
 
 #work {
-    background-color: $medium-blue;
+    background-color: $dark-blue-2;
     color: $off-white;
 
     .example-group {
@@ -236,8 +264,10 @@ header {
         cursor: pointer;
     }
     .example img {
+        border: 1px solid $darkest-blue;
         position: absolute;  
         left: 0;
+        opacity: 1;
         -webkit-transition: all 300ms ease-out;  
         -moz-transition: all 300ms ease-out;  
         -o-transition: all 300ms ease-out;  
@@ -247,7 +277,7 @@ header {
     }
     .example:hover img {
         z-index: 1;
-        opacity: 0.4;
+        opacity: 0.2;
         -moz-transform: scale(1.4);
         -o-transform: scale(1.4);
         -webkit-transform: scale(1.4);
@@ -258,7 +288,7 @@ header {
         color: $off-white;    
     }
     .example .caption > h3 {
-        font-weight: 400;
+        font-weight: 500;
         position: absolute;
         left: 6%;
         top: 14%;
@@ -269,6 +299,84 @@ header {
         left: 6%;
         top: 28%;
         z-index: 50;
+    }
+    button {
+        margin-top: 2.6rem;
+        margin-bottom: 2.6rem;        
+    }
+}
+
+#work-example {
+    background-color: $dark-blue-2;
+    color: $off-white;
+    .example {
+        margin: 4rem 0 2rem 0;
+    }
+    h3 {
+        font: 400 1.8rem/2rem $font-1;
+        letter-spacing: 0.1rem;
+        margin: 0.4rem;
+        color: $off-white; 
+    }
+    img {
+        border: 1px solid $off-white;
+        box-shadow: 4px 4px 2px $darkest-blue; 
+    }
+    .screenshots {
+        width: 44%;
+        float: left;
+    }
+    .details {
+        width: 52%;
+        float: left;
+    }
+    .details > div {
+        margin: 0 0 2rem 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+    .details > .date {
+        font: 300 1.4rem/1.6rem $font-1;
+    }
+    .details > .skills-used {
+        font: 600 1.6rem/1.6rem $font-1;
+    }
+    .details > .description {
+        font: 400 1.4rem/1.8rem $font-1;
+        text-align: left;
+        margin-left: 2rem;
+    }
+    .details > .refs {
+        font: 400 1.2rem/1.4rem $font-1;
+        text-transform: uppercase;
+    }
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+    .rslides img {
+        background-color: $light-gray;
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 1px solid $darkest-blue;
     }
 }
 
@@ -295,20 +403,23 @@ header {
         letter-spacing: 0.3rem;
         margin: 3rem auto 1rem auto;
     }
+    .title a {
+        color: $off-white;        
+    }
     .date {
         font: 200 1.2rem/1.2rem $font-1;
         letter-spacing: 0.1rem;
         margin: 1rem auto;
-    } 
-    .text {
+    }
+    .text p {
         font: 300 1.5rem/2.4rem $font-1;
         margin: 1rem 1rem 3rem 1rem;
         text-align: justify;
         text-justify: inter-word;
-    } 
-    a {
-        margin-left: 1.2rem;
-        text-transform: uppercase;
+    }
+    .loading {
+        margin: 4rem auto;
+        font-size: 3rem;
     }
 }
 
@@ -359,12 +470,23 @@ header {
         background-color: $dark-blue-2;
     }
     textarea {
-        height: 24rem;
+        height: 4rem;
     }
     input:focus, textarea:focus {
         color: $off-white;
         border: 1px solid $off-white;
         background-color: $dark-blue-1;
+    }
+    #contact-form-msg {
+        font: 400 2.8rem/3.2rem $font-1;
+        letter-spacing: 0.2rem;
+        margin: 8rem 0;
+        color: $success;
+        span {
+            font: 400 1.6rem/1.8rem $font-1;
+            color: $off-white;
+        }
+        
     }
 }
 
@@ -372,7 +494,8 @@ header {
 
 footer {
     background-color: $darkest-blue;
-    background-image: url('../img/grid.png');
+    background-image: url('../img/code-bkgd.png');
+    background-size: cover;
     color: $light-gray;
     margin: 0;
     padding: 4rem 0;
@@ -469,6 +592,18 @@ footer {
     }
     #about p {
         font-size: 1.4rem;
+    }
+    #work-example {
+        .screenshots {
+            float: none;
+            width: 75%;
+            margin: 2rem auto;
+        }
+        .details {
+            float: none;
+            width: 75%;
+            margin: 2rem auto;
+        }
     }
     #posts .post {
         width: 80%;

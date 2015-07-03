@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta author="Edward Bryant">
+    <meta description="Web developer portfolio for Edward Bryant.">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <title>LexHacks Contract Reader - Web Developer Portfolio | Edward Bryant</title>
+</head>
+<body>
+<header>
+    <nav>
+        <div id="btn-nav"><a href=""><i class="fa fa-border fa-navicon"></i></a></div>
+        <ul>
+            <li id="about-link"><a href="portfolio.html#about">About Me</a></li>
+            <li id="work-link"><a href="portfolio.html#work">Recent Work</a></li>
+            <li id="posts-link"><a href="portfolio.html#posts">Recent Posts</a></li>
+            <li id="contact-link"><a href="portfolio.html#contact">Contact Me</a></li> 
+        </ul>
+    </nav>
+</header>
+<main id="main" role="main">
+    <section id="work-example">
+        <div class="content return">
+            <div><a href="portfolio.html"><i class="fa fa-angle-double-left"></i> Return to Portfolio</a></div>
+        </div>
+        <div class="content">
+            <h2>&bull; LexHacks Contract Reader &bull;</h2>
+            <h3>LexHacks 2015 Hackathon Winner</h3>
+            <div class="example clearfix">
+                <div class="screenshots">
+                    <ul class="rslides">
+                    <li><img src="img/lexhacks-contract-reader/pic-1.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <div class="date">June 2015</div>
+                    <div class="skills-used">Python &bull; NLTK 3 &bull; Natural Language Processing &bull; Token Parsing</div>
+                    <div class="description">This project was a winning submission in the two-day <a target="_blank" rel="external" href="http://www.lexhacks.com">LexHacks 2015</a> hackathon. The project was in response to a specific challenge by one of the event's sponsors - <a target="_blank" rel="external" href="http://www.lexpredict.com">LexPredict, LLC</a> which required a tool to extract certain information (party names, effective dates, etc.) from a sample of over 30,000 legal contracts. The submission was created by a team of six people, which included lawyers and developers. I led the direction of the team and contributed most of the Python code. </div>
+                    <div class="refs"><a target="_blank" rel="external" href="https://github.com/edwardbryant/lexhacks-contract-reader">Github</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="content">
+        <div class="copyright">&copy; 2015, Edward Bryant</div>
+        <div class="credits">&bull; Developed and designed by Edward Bryant &bull;</div>
+        <div class="thanks">Thanks for visiting!</div>
+    </div>
+</footer>
+<script src="http://www.edwardbryant.com/lib/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://www.edwardbryant.com/lib/playSound/jquery.playSound.js"></script>
+<script src="lib/responsiveslides/1.54/responsiveslides.min.js"></script>
+<script src="portfolio.js"></script>
+<script>
+    $(function() {
+        $(".rslides").responsiveSlides({
+            auto: true,
+            speed: 800,
+            timeout: 2500
+        });
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-697330-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
