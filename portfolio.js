@@ -4,29 +4,20 @@ $(document).ready(function(){
     getBlogPosts();
 
     $('nav').find('#btn-nav').on('click', function() {
-        $.playSound('sfx/sound2');
         $('nav').find('ul').slideToggle(600);
         return false;
     })
 
-    $('nav').find('li').on('click', function() {
-        $.playSound('sfx/sound2');
-    })
-
     $('#about-link').on('click', function() {
-        $.playSound('sfx/sound2');
         window.location.hash = "#about";
     })
     $('#work-link').on('click', function() {
-        $.playSound('sfx/sound2');
         window.location.hash = "#work";
     })
     $('#posts-link').on('click', function() {
-        $.playSound('sfx/sound2');
         window.location.hash = "#posts";
     })
     $('#contact-link').on('click', function() {
-        $.playSound('sfx/sound2');
         window.location.hash = "#contact";
     })
 
@@ -34,7 +25,6 @@ $(document).ready(function(){
         $('#about-extra').toggle(500, function() {
             var more = 'More <i class="fa fa-angle-down"></i>';
             var less = 'Less <i class="fa fa-angle-up"></i>';
-            $.playSound('sfx/sound2');
             ($('#about-expand').html() === more) ? $('#about-expand').html(less) : $('#about-expand').html(more);
         });
         return false;
@@ -57,9 +47,6 @@ $(document).ready(function(){
     });
 
 });
-
-
-
 
 var getBlogPosts = function() {
     $.getJSON( "http://www.edwardbryant.com/blog/wp-json/posts", function( data ) {
@@ -84,5 +71,3 @@ var getBlogPosts = function() {
         $('#post2').find('.text').html(posts[1]["text"]);
     });
 };
-
-
